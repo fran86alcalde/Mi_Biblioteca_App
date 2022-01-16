@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentationdomain.favoritos">
+
+
+    <Button
+        android:id="@+id/botonAñadirFavoritos"
+        android:layout_width="258dp"
+        android:layout_height="70dp"
+        android:onClick="insertDataTable"
+        android:text="Añadir favorito"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975" />
+
+    <EditText
+        android:id="@+id/editTextFavoritos"
+        android:layout_width="320dp"
+        android:layout_height="71dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:backgroundTint="#B68989"
+        android:hint="Introduce tu libro favorito"
+        app:layout_constraintBottom_toTopOf="@+id/botonAñadirFavoritos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.945" />
+
+    <ScrollView
+        android:id="@+id/scrollFavoritos"
+        android:layout_width="393dp"
+        android:layout_height="462dp"
+        android:layout_marginTop="16dp"
+        android:background="#D6B2B2"
+        app:layout_constraintBottom_toTopOf="@+id/editTextFavoritos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/ListaFavoritos"
+                android:layout_width="match_parent"
+                android:layout_height="447dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
